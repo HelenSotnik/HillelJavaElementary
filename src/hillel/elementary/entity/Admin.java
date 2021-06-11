@@ -2,8 +2,8 @@ package hillel.elementary.entity;
 
 public class Admin extends Entity {
 
-    public Admin(Role role) {
-        super(role);
+    public Admin() {
+        super(Role.ADMIN);
     }
 
     @Override

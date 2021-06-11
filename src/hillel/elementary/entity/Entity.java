@@ -9,7 +9,7 @@ public class Entity {
     private Role role;
 
     public Entity(Role role) {
-        this.role = role;
+       this.role = role;
     }
 
     public String getFirstName() {

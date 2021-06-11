@@ -1,8 +1,6 @@
 package hillel.elementary;
 
 import hillel.elementary.entity.Admin;
-import hillel.elementary.entity.Entity;
-import hillel.elementary.entity.Role;
 import hillel.elementary.entity.User;
 import hillel.elementary.service.AdminService;
 import hillel.elementary.service.UserService;
@@ -12,14 +10,14 @@ public class Main {
 
         String filePath = "/Users/lenasotnik/Desktop/Elementary/src/hillel/elementary/FileUser.txt";
 
-        User user = new User(Role.USER);
+        User user = new User();
         user.setFirstName("Martha");
         user.setLastName("Steward");
         user.setAge(55);
         user.setEmail("martha@gmail.com");
         user.setPassword("stew.m1966");
 
-        Admin admin = new Admin(Role.ADMIN);
+        Admin admin = new Admin();
         admin.setFirstName("Dilan");
         admin.setLastName("McKinley");
         admin.setAge(25);
