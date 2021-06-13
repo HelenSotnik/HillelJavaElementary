@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-abstract class CheckUser {
+public abstract class AbstractService {
     private String filePath;
 
     public boolean checkUser(Entity entity) throws IOException {

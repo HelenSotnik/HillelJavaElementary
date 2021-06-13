@@ -4,7 +4,7 @@ import hillel.elementary.entity.Entity;
 
 import java.io.*;
 
-public class AdminService extends CheckUser implements Service {
+public class AdminService extends AbstractService implements Service {
 
     @Override
     public void signUpUserData(Entity entity) throws IOException {

@@ -2,7 +2,7 @@ package hillel.elementary.service;
 
 import hillel.elementary.entity.Entity;
 
-public class UserService extends CheckUser implements Service {
+public class UserService extends AbstractService implements Service {
     private static final String MESSAGE = "Current method is unavailable for UserService";
 
     @Override

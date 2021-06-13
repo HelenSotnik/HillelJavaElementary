@@ -8,7 +8,7 @@ import hillel.elementary.service.UserService;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        String filePath = "/Users/lenasotnik/Desktop/Elementary/src/hillel/elementary/FileUser.txt";
+        String filePath = "/Users/lenasotnik/Desktop/Hillel/HillelJavaElementary/src/resources/FileUser.txt";
 
         User user = new User();
         user.setFirstName("Martha");
