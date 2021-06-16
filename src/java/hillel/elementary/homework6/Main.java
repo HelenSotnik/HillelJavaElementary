@@ -15,10 +15,9 @@ public class Main {
 
         Information newInfo = additionStrings(arrayList, information);
 
-        System.out.println("Email set size: " + newInfo.emailSet.size());
-        System.out.println("Email-Nickname map size: " + newInfo.emailNicknameMap.size());
-        System.out.println("Nickname list size " + newInfo.nicknameList.size());
-
+        System.out.println("Email set size: " + newInfo.getEmailSet().size());
+        System.out.println("Email-Nickname map size: " + newInfo.getEmailNicknameMap().size());
+        System.out.println("Nickname list size " + newInfo.getNicknameList().size());
     }
 
     public static Information additionStrings(List<? extends Number> intList, Information info) {

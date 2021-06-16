@@ -6,9 +6,9 @@ import java.util.Set;
 
 public class Information {
 
-    List<String> nicknameList;
-    Set<String> emailSet;
-    Map<String,String> emailNicknameMap;
+    private List<String> nicknameList;
+    private Set<String> emailSet;
+    private Map<String,String> emailNicknameMap;
 
     public List<String> getNicknameList() {
         return nicknameList;
