@@ -21,7 +21,7 @@ public class Main {
 
     }
 
-    public static Information additionStrings(List<? super Integer> intList, Information info) {
+    public static Information additionStrings(List<? extends Number> intList, Information info) {
 
         List<String> newNicknameList = info.getNicknameList();
         Set<String> newEmailSet = info.getEmailSet();
