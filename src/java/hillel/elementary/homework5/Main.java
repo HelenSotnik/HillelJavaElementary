@@ -1,9 +1,9 @@
-package hillel.elementary;
+package hillel.elementary.homework5;
 
-import hillel.elementary.entity.Admin;
-import hillel.elementary.entity.User;
-import hillel.elementary.service.AdminService;
-import hillel.elementary.service.UserService;
+import hillel.elementary.homework5.entity.Admin;
+import hillel.elementary.homework5.entity.User;
+import hillel.elementary.homework5.service.AdminService;
+import hillel.elementary.homework5.service.UserService;
 
 public class Main {
     public static void main(String[] args) throws Exception {

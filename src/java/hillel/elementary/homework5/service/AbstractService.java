@@ -1,6 +1,6 @@
-package hillel.elementary.service;
+package hillel.elementary.homework5.service;
 
-import hillel.elementary.entity.Entity;
+import hillel.elementary.homework5.entity.Entity;
 
 import java.io.BufferedReader;
 import java.io.File;

@@ -1,4 +1,4 @@
-package hillel.elementary.entity;
+package hillel.elementary.homework5.entity;
 
 public class Entity {
     private String firstName;
