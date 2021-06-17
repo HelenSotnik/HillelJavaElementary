@@ -20,14 +20,14 @@ public class Main {
         System.out.println("Nickname list size " + newInfo.getNicknameList().size());
     }
 
-    public static Information additionStrings(List<? extends Number> intList, Information info) {
+    public static Information additionStrings(List<? extends Number> numberList, Information info) {
 
         List<String> newNicknameList = info.getNicknameList();
         Set<String> newEmailSet = info.getEmailSet();
         Map<String, String> newEmailNicknameMap = info.getEmailNicknameMap();
 
-        for (int i = 0; i < intList.size(); i++) {
-            String nickname = String.valueOf(intList.get(i));
+        for (int i = 0; i < numberList.size(); i++) {
+            String nickname = String.valueOf(numberList.get(i));
 
             newNicknameList.add(nickname);
             newEmailSet.add(nickname + "@mail.ua");

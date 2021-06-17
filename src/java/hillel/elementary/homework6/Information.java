@@ -8,7 +8,7 @@ public class Information {
 
     private List<String> nicknameList;
     private Set<String> emailSet;
-    private Map<String,String> emailNicknameMap;
+    private Map<String, String> emailNicknameMap;
 
     public List<String> getNicknameList() {
         return nicknameList;
