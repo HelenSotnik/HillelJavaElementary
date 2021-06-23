@@ -1,7 +1,6 @@
 package hillel.elementary.homework8.entities;
 
 public class Client {
-
     private String id;
     private String lastName;
     private String accountId;

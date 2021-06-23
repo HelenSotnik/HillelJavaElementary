@@ -7,9 +7,7 @@ import hillel.elementary.homework8.utils.Helper;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
-
         Helper helper = new Helper();
 
         Scanner sc = new Scanner(System.in);
@@ -40,7 +38,7 @@ public class Main {
             sc.close();
         }
 
-        System.out.println("Sum of transaction is " + sum + ". " +
+        System.out.println("Sum of transaction is " + sum + "hrn. " +
                 "Please wait for checking the client data ...");
 
         Client client = new Client();
@@ -53,7 +51,6 @@ public class Main {
     }
 
     private static String validateAccountIdLength(String accountId, Scanner sc, Helper help) {
-
         try {
             while (accountId.length() != 10) {
                 help.checkAccountIdLength(accountId);
