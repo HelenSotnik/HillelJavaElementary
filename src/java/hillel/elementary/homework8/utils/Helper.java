@@ -5,26 +5,19 @@ import hillel.elementary.homework8.exceptions.WrongFieldException;
 import hillel.elementary.homework8.exceptions.WrongSumException;
 
 public class Helper {
-    public void checkAccountIdLength(String accountId) {
+    public void checkAccountIdLength(String accountId) throws WrongFieldException {
         if (accountId.length() != 10) {
-            try {
-                throw new WrongFieldException("Incorrect client Account Id length: "
-                        + accountId.length());
-            } catch (WrongFieldException e) {
-                e.printStackTrace();
-            }
+            throw new WrongFieldException("Incorrect client Account Id length: "
+                    + accountId.length());
         }
     }
 
-    public void checkSum(Double sum) {
+    public void checkSum(Double sum) throws WrongSumException {
         if (sum > 1000.00) {
-            try {
-                throw new WrongSumException("Incorrect sum: " + sum);
-            } catch (WrongSumException e) {
-                e.printStackTrace();
-            }
+            throw new WrongSumException("Incorrect sum: " + sum);
         }
     }
+
 
     public void checkAccountIdEquality(String accountIdWhoSends, String accountIdWhoAccepts) {
         if (accountIdWhoSends.equals(accountIdWhoAccepts)) {

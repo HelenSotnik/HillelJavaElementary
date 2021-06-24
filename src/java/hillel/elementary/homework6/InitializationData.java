@@ -3,7 +3,6 @@ package hillel.elementary.homework6;
 import java.util.*;
 
 public class InitializationData {
-
     private Information info;
 
     public InitializationData() {
@@ -11,11 +10,14 @@ public class InitializationData {
     }
 
     public Information fillTheData() {
+        Map<String, String> emailNicknameMap = new HashMap<>();
+        emailNicknameMap.putAll(fillEmailNicknameMap());
+
         List<String> nicknames = new ArrayList<>();
+        nicknames.addAll(emailNicknameMap.values());
 
         Set<String> emails = new HashSet<>();
-
-        Map<String, String> emailNicknameMap = new HashMap<>();
+        emails.addAll(emailNicknameMap.keySet());
 
         String emailToFill = "z@gmail.com";
         String nicknameToFill = "z";
@@ -25,10 +27,6 @@ public class InitializationData {
             emails.add(emailToFill);
             emailNicknameMap.put(emailToFill, nicknameToFill);
         }
-
-        emailNicknameMap.putAll(fillEmailNicknameMap());
-        nicknames.addAll(emailNicknameMap.values());
-        emails.addAll(emailNicknameMap.keySet());
 
         info.setNicknameList(nicknames);
         info.setEmailSet(emails);

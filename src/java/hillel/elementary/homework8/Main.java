@@ -1,6 +1,8 @@
 package hillel.elementary.homework8;
 
 import hillel.elementary.homework8.entities.Client;
+import hillel.elementary.homework8.exceptions.WrongFieldException;
+import hillel.elementary.homework8.exceptions.WrongSumException;
 import hillel.elementary.homework8.services.TransactionService;
 import hillel.elementary.homework8.utils.Helper;
 
@@ -24,26 +26,15 @@ public class Main {
 
         System.out.println("Enter sum of money transaction: ");
         double sum = sc.nextDouble();
+        double validSum = validateSumOfTransaction(sum, sc, helper);
+        sc.close();
 
-        try {
-            while (sum > 1000) {
-                helper.checkSum(sum);
-                System.out.println("Sum cannot be bigger than 1000.\n" +
-                        "Enter Sum of transaction again: ");
-                sum = sc.nextDouble();
-            }
-        } catch (Exception e) {
-            e.getStackTrace();
-        } finally {
-            sc.close();
-        }
-
-        System.out.println("Sum of transaction is " + sum + "hrn. " +
+        System.out.println("Sum of transaction is " + validSum + "hrn. " +
                 "Please wait for checking the client data ...");
 
         Client client = new Client();
         client.setAccountId(validAccountIdWhoSends);
-        client.setSum(sum);
+        client.setSum(validSum);
 
         TransactionService service = new TransactionService();
         service.proceedTransaction(client, validAccountIdWhoAccepts);
@@ -58,9 +49,23 @@ public class Main {
                         "Enter Account Id again:");
                 accountId = sc.next();
             }
-        } catch (Exception e) {
-            e.getStackTrace();
+        } catch (WrongFieldException e) {
+            e.printStackTrace();
         }
         return accountId;
+    }
+
+    private static Double validateSumOfTransaction(Double sum, Scanner sc, Helper help) {
+        try {
+            while (sum > 1000) {
+                help.checkSum(sum);
+                System.out.println("Sum cannot be bigger than 1000.\n" +
+                        "Enter Sum of transaction again: ");
+                sum = sc.nextDouble();
+            }
+        } catch (WrongSumException e) {
+            e.printStackTrace();
+        }
+        return sum;
     }
 }
