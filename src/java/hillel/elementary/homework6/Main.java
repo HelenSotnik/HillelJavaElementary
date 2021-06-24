@@ -4,7 +4,6 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-
         InitializationData initializationData = new InitializationData();
         Information information = initializationData.fillTheData();
 
@@ -21,10 +20,9 @@ public class Main {
     }
 
     public static Information additionStrings(List<? extends Number> numberList, Information info) {
-
-        List<String> newNicknameList = info.getNicknameList();
-        Set<String> newEmailSet = info.getEmailSet();
         Map<String, String> newEmailNicknameMap = info.getEmailNicknameMap();
+        Set<String> newEmailSet = info.getEmailSet();
+        List<String> newNicknameList = info.getNicknameList();
 
         for (int i = 0; i < numberList.size(); i++) {
             String nickname = String.valueOf(numberList.get(i));
