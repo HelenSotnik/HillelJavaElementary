@@ -42,29 +42,29 @@ public class Main {
     }
 
     private static String validateAccountIdLength(String accountId, Scanner sc, Helper help) {
-        try {
-            while (accountId.length() != 10) {
+        while (accountId.length() != 10) {
+            try {
                 help.checkAccountIdLength(accountId);
-                System.out.println("Account Id length should be 10.\n" +
-                        "Enter Account Id again:");
-                accountId = sc.next();
+            } catch (WrongFieldException e) {
+                e.printStackTrace();
             }
-        } catch (WrongFieldException e) {
-            e.printStackTrace();
+            System.out.println("Account Id length should be 10.\n" +
+                    "Enter Account Id again:");
+            accountId = sc.next();
         }
         return accountId;
     }
 
     private static Double validateSumOfTransaction(Double sum, Scanner sc, Helper help) {
-        try {
-            while (sum > 1000) {
+        while (sum > 1000) {
+            try {
                 help.checkSum(sum);
-                System.out.println("Sum cannot be bigger than 1000.\n" +
-                        "Enter Sum of transaction again: ");
-                sum = sc.nextDouble();
+            } catch (WrongSumException e) {
+                e.printStackTrace();
             }
-        } catch (WrongSumException e) {
-            e.printStackTrace();
+            System.out.println("Sum cannot be bigger than 1000.\n" +
+                    "Enter Sum of transaction again: ");
+            sum = sc.nextDouble();
         }
         return sum;
     }
