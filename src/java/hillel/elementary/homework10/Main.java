@@ -12,7 +12,7 @@ public class Main {
 
         StringHelper helper = new StringHelper();
         System.out.println("Adjusted string: " + helper.adjustSting(myString, array));
-
+        
         Helper help = new Helper();
         Scanner scanner = new Scanner(System.in);
 
@@ -21,5 +21,6 @@ public class Main {
         System.out.println("Valid email: " + help.validateEmail(scanner));
 
         System.out.println("Valid date of birth: " + help.validateDateOfBirthday(scanner));
+        scanner.close();
     }
 }
