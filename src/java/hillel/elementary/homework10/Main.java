@@ -1,7 +1,8 @@
 package hillel.elementary.homework10;
 
-import hillel.elementary.homework10.utils.Helper;
+import hillel.elementary.homework10.exceptions.StringFormatException;
 import hillel.elementary.homework10.utils.StringHelper;
+import  hillel.elementary.homework10.utils.Helper;
 
 import java.util.Scanner;
 
@@ -11,8 +12,13 @@ public class Main {
         char[] array = {' ', 'd', 'e', 'k', 'o', ' '};
 
         StringHelper helper = new StringHelper();
-        System.out.println("Adjusted string: " + helper.adjustSting(myString, array));
-        
+        try {
+            System.out.println("Adjusted string: " + helper.adjustSting(myString, array));
+        } catch (StringFormatException e){
+            e.printStackTrace();
+        }
+
+
         Helper help = new Helper();
         Scanner scanner = new Scanner(System.in);
 
